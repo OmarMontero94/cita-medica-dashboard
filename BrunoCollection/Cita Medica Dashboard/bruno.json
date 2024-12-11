@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "Cita Medica Dashboard",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}
