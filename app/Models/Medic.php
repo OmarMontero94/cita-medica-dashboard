@@ -16,7 +16,8 @@ class Medic extends Model
         'phone',
         'user_id',
         'location_id',
-        'specialty_id'
+        'specialty_id',
+        'verified_at',
     ];
     public $timestamps = true;
 
