@@ -26,7 +26,10 @@ class MedicPostPutRequest extends FormRequest
         return [
             'name'=>'required|string',
             'email'=>'required|string|email|unique:users',
-            'password'=>['required','confirmed',Password::min(12)->numbers()->mixedCase()->symbols()]
+            'password'=>['required','confirmed',Password::min(12)->numbers()->mixedCase()->symbols()],
+            'phone'=>'required|string',
+            'location_id'=>'required|integer',
+            'specialty_id'=>'required|integer'
         ];
     }
 }
