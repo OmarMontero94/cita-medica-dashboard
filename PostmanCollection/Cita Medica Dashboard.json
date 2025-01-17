@@ -1,0 +1,1127 @@
+{
+  "info": {
+    "name": "Cita Medica Dashboard",
+    "description": "",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Authentication",
+      "item": [
+        {
+          "name": "Login User",
+          "event": [],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "auth": {
+              "type": "noauth"
+            },
+            "description": "",
+            "url": {
+              "raw": "{{baseUrl}}/api/login",
+              "protocol": "",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "login"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "email",
+                  "value": "test@email.com",
+                  "disabled": false,
+                  "type": "default"
+                },
+                {
+                  "key": "password",
+                  "value": "12345678Test*",
+                  "disabled": false,
+                  "type": "default"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Logout User",
+          "event": [],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": {
+                "key": "token",
+                "value": "4|8oKsw23wue9xSrrTBahX3cm1API9RH9E6B5x0Axq8a7adb69",
+                "type": "string"
+              }
+            },
+            "description": "",
+            "url": {
+              "raw": "{{baseUrl}}/api/logout",
+              "protocol": "",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "logout"
+              ],
+              "query": [],
+              "variable": []
+            }
+          }
+        },
+        {
+          "name": "Register User",
+          "event": [],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "auth": {
+              "type": "noauth"
+            },
+            "description": "",
+            "url": {
+              "raw": "{{baseUrl}}/api/register",
+              "protocol": "",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "register"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "",
+                  "value": "",
+                  "disabled": false,
+                  "type": "default"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Test",
+      "item": [
+        {
+          "name": "Test",
+          "event": [],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "auth": {
+              "type": "noauth"
+            },
+            "description": "",
+            "url": {
+              "raw": "{{baseUrl}}/api/test",
+              "protocol": "",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "test"
+              ],
+              "query": [],
+              "variable": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "bruno",
+      "event": []
+    },
+    {
+      "name": "Specialty",
+      "item": [
+        {
+          "name": "List specialties",
+          "event": [],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": {
+                "key": "token",
+                "value": "1|iRtDeUtsXAe53hr4VmHg6L9SFzoKVVQMM0ky6gXV28507c5d",
+                "type": "string"
+              }
+            },
+            "description": "",
+            "url": {
+              "raw": "{{baseUrl}}/api/specialty",
+              "protocol": "",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "specialty"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": []
+            }
+          }
+        },
+        {
+          "name": "Register Medic",
+          "event": [],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": {
+                "key": "token",
+                "value": "1|iRtDeUtsXAe53hr4VmHg6L9SFzoKVVQMM0ky6gXV28507c5d",
+                "type": "string"
+              }
+            },
+            "description": "",
+            "url": {
+              "raw": "{{baseUrl}}/api/specialty",
+              "protocol": "",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "specialty"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "title",
+                  "value": "test especialidad",
+                  "disabled": false,
+                  "type": "default"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get Specialty",
+          "event": [],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": {
+                "key": "token",
+                "value": "1|iRtDeUtsXAe53hr4VmHg6L9SFzoKVVQMM0ky6gXV28507c5d",
+                "type": "string"
+              }
+            },
+            "description": "",
+            "url": {
+              "raw": "{{baseUrl}}/api/specialty/4",
+              "protocol": "",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "specialty",
+                "4"
+              ],
+              "query": [],
+              "variable": []
+            }
+          }
+        },
+        {
+          "name": "Update Specialty",
+          "event": [],
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": {
+                "key": "token",
+                "value": "1|iRtDeUtsXAe53hr4VmHg6L9SFzoKVVQMM0ky6gXV28507c5d",
+                "type": "string"
+              }
+            },
+            "description": "",
+            "url": {
+              "raw": "{{baseUrl}}/api/specialty/5",
+              "protocol": "",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "specialty",
+                "5"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "title",
+                  "value": "Urologia",
+                  "disabled": false,
+                  "type": "default"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Delete Specialty",
+          "event": [],
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": {
+                "key": "token",
+                "value": "1|iRtDeUtsXAe53hr4VmHg6L9SFzoKVVQMM0ky6gXV28507c5d",
+                "type": "string"
+              }
+            },
+            "description": "",
+            "url": {
+              "raw": "{{baseUrl}}/api/specialty/4",
+              "protocol": "",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "specialty",
+                "4"
+              ],
+              "query": [],
+              "variable": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Location",
+      "item": [
+        {
+          "name": "Register Location",
+          "event": [],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": {
+                "key": "token",
+                "value": "1|iRtDeUtsXAe53hr4VmHg6L9SFzoKVVQMM0ky6gXV28507c5d",
+                "type": "string"
+              }
+            },
+            "description": "",
+            "url": {
+              "raw": "{{baseUrl}}/api/location",
+              "protocol": "",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "location"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "title",
+                  "value": "Test location",
+                  "disabled": false,
+                  "type": "default"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "List Locations",
+          "event": [],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": {
+                "key": "token",
+                "value": "1|iRtDeUtsXAe53hr4VmHg6L9SFzoKVVQMM0ky6gXV28507c5d",
+                "type": "string"
+              }
+            },
+            "description": "",
+            "url": {
+              "raw": "{{baseUrl}}/api/location",
+              "protocol": "",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "location"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": []
+            }
+          }
+        },
+        {
+          "name": "Delete Specialty",
+          "event": [],
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": {
+                "key": "token",
+                "value": "1|iRtDeUtsXAe53hr4VmHg6L9SFzoKVVQMM0ky6gXV28507c5d",
+                "type": "string"
+              }
+            },
+            "description": "",
+            "url": {
+              "raw": "{{baseUrl}}/api/location/3",
+              "protocol": "",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "location",
+                "3"
+              ],
+              "query": [],
+              "variable": []
+            }
+          }
+        },
+        {
+          "name": "Get Location",
+          "event": [],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": {
+                "key": "token",
+                "value": "1|iRtDeUtsXAe53hr4VmHg6L9SFzoKVVQMM0ky6gXV28507c5d",
+                "type": "string"
+              }
+            },
+            "description": "",
+            "url": {
+              "raw": "{{baseUrl}}/api/location/1",
+              "protocol": "",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "location",
+                "1"
+              ],
+              "query": [],
+              "variable": []
+            }
+          }
+        },
+        {
+          "name": "Update Location",
+          "event": [],
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": {
+                "key": "token",
+                "value": "1|iRtDeUtsXAe53hr4VmHg6L9SFzoKVVQMM0ky6gXV28507c5d",
+                "type": "string"
+              }
+            },
+            "description": "",
+            "url": {
+              "raw": "{{baseUrl}}/api/location/3",
+              "protocol": "",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "location",
+                "3"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "title",
+                  "value": "Puerto Ordaz - Unare",
+                  "disabled": false,
+                  "type": "default"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Service",
+      "item": [
+        {
+          "name": "Update Service",
+          "event": [],
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": {
+                "key": "token",
+                "value": "1|iRtDeUtsXAe53hr4VmHg6L9SFzoKVVQMM0ky6gXV28507c5d",
+                "type": "string"
+              }
+            },
+            "description": "",
+            "url": {
+              "raw": "{{baseUrl}}/api/service/6",
+              "protocol": "",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "service",
+                "6"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "title",
+                  "value": "Examenes - Oncologia",
+                  "disabled": false,
+                  "type": "default"
+                },
+                {
+                  "key": "specialty_id",
+                  "value": "1",
+                  "disabled": false,
+                  "type": "default"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Delete Service",
+          "event": [],
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": {
+                "key": "token",
+                "value": "1|iRtDeUtsXAe53hr4VmHg6L9SFzoKVVQMM0ky6gXV28507c5d",
+                "type": "string"
+              }
+            },
+            "description": "",
+            "url": {
+              "raw": "{{baseUrl}}/api/service/6",
+              "protocol": "",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "service",
+                "6"
+              ],
+              "query": [],
+              "variable": []
+            }
+          }
+        },
+        {
+          "name": "Register Service",
+          "event": [],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": {
+                "key": "token",
+                "value": "1|iRtDeUtsXAe53hr4VmHg6L9SFzoKVVQMM0ky6gXV28507c5d",
+                "type": "string"
+              }
+            },
+            "description": "",
+            "url": {
+              "raw": "{{baseUrl}}/api/service",
+              "protocol": "",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "service"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "title",
+                  "value": "QuimioTerapia - Oncologia",
+                  "disabled": false,
+                  "type": "default"
+                },
+                {
+                  "key": "specialty_id",
+                  "value": "1",
+                  "disabled": false,
+                  "type": "default"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "List Services",
+          "event": [],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": {
+                "key": "token",
+                "value": "1|iRtDeUtsXAe53hr4VmHg6L9SFzoKVVQMM0ky6gXV28507c5d",
+                "type": "string"
+              }
+            },
+            "description": "",
+            "url": {
+              "raw": "{{baseUrl}}/api/service",
+              "protocol": "",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "service"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": []
+            }
+          }
+        },
+        {
+          "name": "Get Service",
+          "event": [],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": {
+                "key": "token",
+                "value": "1|iRtDeUtsXAe53hr4VmHg6L9SFzoKVVQMM0ky6gXV28507c5d",
+                "type": "string"
+              }
+            },
+            "description": "",
+            "url": {
+              "raw": "{{baseUrl}}/api/service/6",
+              "protocol": "",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "service",
+                "6"
+              ],
+              "query": [],
+              "variable": []
+            }
+          }
+        },
+        {
+          "name": "List Services By Specialty",
+          "event": [],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": {
+                "key": "token",
+                "value": "1|iRtDeUtsXAe53hr4VmHg6L9SFzoKVVQMM0ky6gXV28507c5d",
+                "type": "string"
+              }
+            },
+            "description": "",
+            "url": {
+              "raw": "{{baseUrl}}/api/service/specialty/1",
+              "protocol": "",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "service",
+                "specialty",
+                "1"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Medic",
+      "item": [
+        {
+          "name": "Register medic",
+          "event": [],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": {
+                "key": "token",
+                "value": "1|iRtDeUtsXAe53hr4VmHg6L9SFzoKVVQMM0ky6gXV28507c5d",
+                "type": "string"
+              }
+            },
+            "description": "",
+            "url": {
+              "raw": "{{baseUrl}}/api/register/medic",
+              "protocol": "",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "register",
+                "medic"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "name",
+                  "value": "Pedro Ramirez",
+                  "disabled": false,
+                  "type": "default"
+                },
+                {
+                  "key": "email",
+                  "value": "pramirez@test.com",
+                  "disabled": false,
+                  "type": "default"
+                },
+                {
+                  "key": "password",
+                  "value": "12345678Test*",
+                  "disabled": false,
+                  "type": "default"
+                },
+                {
+                  "key": "password_confirmation",
+                  "value": "12345678Test*",
+                  "disabled": false,
+                  "type": "default"
+                },
+                {
+                  "key": "phone",
+                  "value": "0414-9703439",
+                  "disabled": false,
+                  "type": "default"
+                },
+                {
+                  "key": "location_id",
+                  "value": "1",
+                  "disabled": false,
+                  "type": "default"
+                },
+                {
+                  "key": "specialty_id",
+                  "value": "1",
+                  "disabled": false,
+                  "type": "default"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "List medics",
+          "event": [],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": {
+                "key": "token",
+                "value": "1|iRtDeUtsXAe53hr4VmHg6L9SFzoKVVQMM0ky6gXV28507c5d",
+                "type": "string"
+              }
+            },
+            "description": "",
+            "url": {
+              "raw": "{{baseUrl}}/api/medic",
+              "protocol": "",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "medic"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": []
+            }
+          }
+        },
+        {
+          "name": "Add Medic Service",
+          "event": [],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": {
+                "key": "token",
+                "value": "1|iRtDeUtsXAe53hr4VmHg6L9SFzoKVVQMM0ky6gXV28507c5d",
+                "type": "string"
+              }
+            },
+            "description": "",
+            "url": {
+              "raw": "{{baseUrl}}/api/medic/service/",
+              "protocol": "",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "medic",
+                "service",
+                ""
+              ],
+              "query": [],
+              "variable": []
+            },
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "service_id",
+                  "value": "2",
+                  "disabled": false,
+                  "type": "default"
+                },
+                {
+                  "key": "medic_id",
+                  "value": "3",
+                  "disabled": false,
+                  "type": "default"
+                },
+                {
+                  "key": "price",
+                  "value": "10.00",
+                  "disabled": false,
+                  "type": "default"
+                },
+                {
+                  "key": "",
+                  "value": "",
+                  "disabled": false,
+                  "type": "default"
+                },
+                {
+                  "key": "",
+                  "value": "",
+                  "disabled": false,
+                  "type": "default"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get Medic Service By Medic",
+          "event": [],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": {
+                "key": "token",
+                "value": "1|iRtDeUtsXAe53hr4VmHg6L9SFzoKVVQMM0ky6gXV28507c5d",
+                "type": "string"
+              }
+            },
+            "description": "",
+            "url": {
+              "raw": "{{baseUrl}}/api/medic/service/3",
+              "protocol": "",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "medic",
+                "service",
+                "3"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "service_id",
+                  "value": "1",
+                  "disabled": false,
+                  "type": "default"
+                },
+                {
+                  "key": "medic_id",
+                  "value": "3",
+                  "disabled": false,
+                  "type": "default"
+                },
+                {
+                  "key": "price",
+                  "value": "20.00",
+                  "disabled": false,
+                  "type": "default"
+                },
+                {
+                  "key": "",
+                  "value": "",
+                  "disabled": false,
+                  "type": "default"
+                },
+                {
+                  "key": "",
+                  "value": "",
+                  "disabled": false,
+                  "type": "default"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Update Medic",
+          "event": [],
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": {
+                "key": "token",
+                "value": "1|iRtDeUtsXAe53hr4VmHg6L9SFzoKVVQMM0ky6gXV28507c5d",
+                "type": "string"
+              }
+            },
+            "description": "",
+            "url": {
+              "raw": "{{baseUrl}}/api/medic/3",
+              "protocol": "",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "medic",
+                "3"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "name",
+                  "value": "Pedro Ramirez updated",
+                  "disabled": false,
+                  "type": "default"
+                },
+                {
+                  "key": "email",
+                  "value": "pramirez@test.com",
+                  "disabled": false,
+                  "type": "default"
+                },
+                {
+                  "key": "password_confirmation",
+                  "value": "12345678Test*",
+                  "disabled": false,
+                  "type": "default"
+                },
+                {
+                  "key": "phone",
+                  "value": "0414-9703439",
+                  "disabled": false,
+                  "type": "default"
+                },
+                {
+                  "key": "location_id",
+                  "value": "1",
+                  "disabled": false,
+                  "type": "default"
+                },
+                {
+                  "key": "specialty_id",
+                  "value": "1",
+                  "disabled": false,
+                  "type": "default"
+                },
+                {
+                  "key": "password",
+                  "value": "12345678Test*",
+                  "disabled": false,
+                  "type": "default"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get Medics CSV",
+          "event": [],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": {
+                "key": "token",
+                "value": "1|iRtDeUtsXAe53hr4VmHg6L9SFzoKVVQMM0ky6gXV28507c5d",
+                "type": "string"
+              }
+            },
+            "description": "",
+            "url": {
+              "raw": "{{baseUrl}}/api/medic/csv",
+              "protocol": "",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "medic",
+                "csv"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": []
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "",
+      "type": "default"
+    }
+  ]
+}
