@@ -4,10 +4,12 @@ namespace App\Http\Controllers;
 use App\Http\Requests\MedicPostPutRequest;
 use App\Models\Medic;
 
+use App\Models\User;
 use Http;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 
 class MedicController extends Controller
@@ -45,7 +47,7 @@ class MedicController extends Controller
             'phone'=>$createMedicData['phone'],
             'location_id'=>$createMedicData['location_id'],
             'specialty_id'=>$createMedicData['specialty_id']
-        ])
+        ]);
     }
 
     public function update(MedicPostPutRequest $request){

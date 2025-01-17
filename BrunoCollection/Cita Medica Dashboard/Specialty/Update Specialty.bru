@@ -1,0 +1,29 @@
+meta {
+  name: Update Specialty
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{baseUrl}}/api/specialty/5
+  body: formUrlEncoded
+  auth: bearer
+}
+
+auth:bearer {
+  token: 1|iRtDeUtsXAe53hr4VmHg6L9SFzoKVVQMM0ky6gXV28507c5d
+}
+
+body:json {
+  {
+    "title": "hola"
+  }
+}
+
+body:form-urlencoded {
+  title: Urologia
+}
+
+body:multipart-form {
+  title: hola
+}

@@ -1,0 +1,23 @@
+meta {
+  name: Register Specialty
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/api/specialty
+  body: formUrlEncoded
+  auth: bearer
+}
+
+auth:bearer {
+  token: 1|iRtDeUtsXAe53hr4VmHg6L9SFzoKVVQMM0ky6gXV28507c5d
+}
+
+body:form-urlencoded {
+  title: test especialidad
+}
+
+body:multipart-form {
+  title: Urologo
+}
