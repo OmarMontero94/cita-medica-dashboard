@@ -1,0 +1,23 @@
+meta {
+  name: Register Location
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/api/location
+  body: formUrlEncoded
+  auth: bearer
+}
+
+auth:bearer {
+  token: 1|iRtDeUtsXAe53hr4VmHg6L9SFzoKVVQMM0ky6gXV28507c5d
+}
+
+body:form-urlencoded {
+  title: Test location
+}
+
+body:multipart-form {
+  title: Urologo
+}

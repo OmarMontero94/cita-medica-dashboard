@@ -2,6 +2,8 @@
 
 namespace App\Models;
 
+
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 
 class Location extends Model
@@ -13,4 +15,14 @@ class Location extends Model
         'title',        
     ];
     public $timestamps = true;
+
+    public function scopeFindById(Builder $query, $specialtyID): void
+    {
+        $query->where('id', $specialtyID);
+    }
+
+    public function scopeOrderByTitleAsc(Builder $query): void
+    {
+        $query->orderBy('title');
+    }
 }
