@@ -10,6 +10,8 @@ Este proyecto es un requisito de la prueba tecnica para Cita Medica, lamentablem
 
 Es importante tener un ambiente de desarrollo bien configurado, necesitaras PHP 8.1^ y composer. Yo me apoyo con Laragon para tener un ambiente de desarrollo completo y enfocado al desarrollo en PHP.
 
+**Pasos:**
+
 1. Descarga el proyecto (o clonalo usando Git)
 2. Copia el contenido de `.env.example` en tu archivo `.env` y confighura las credenciales de base de datos.
 3. Navega al directorio raiz del proyecto usando la terminal.
