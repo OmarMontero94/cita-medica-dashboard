@@ -1,0 +1,30 @@
+meta {
+  name: Update Service
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{baseUrl}}/api/service/6
+  body: formUrlEncoded
+  auth: bearer
+}
+
+auth:bearer {
+  token: 1|iRtDeUtsXAe53hr4VmHg6L9SFzoKVVQMM0ky6gXV28507c5d
+}
+
+body:json {
+  {
+    "title": "hola"
+  }
+}
+
+body:form-urlencoded {
+  title: Examenes - Oncologia
+  specialty_id: 1
+}
+
+body:multipart-form {
+  title: hola
+}
