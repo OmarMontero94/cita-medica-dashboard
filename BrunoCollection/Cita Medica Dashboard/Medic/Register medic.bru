@@ -1,0 +1,29 @@
+meta {
+  name: Register medic
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/api/register/medic
+  body: formUrlEncoded
+  auth: bearer
+}
+
+auth:bearer {
+  token: 1|iRtDeUtsXAe53hr4VmHg6L9SFzoKVVQMM0ky6gXV28507c5d
+}
+
+body:form-urlencoded {
+  name: Pedro Ramirez
+  email: pramirez@test.com
+  password: 12345678Test*
+  password_confirmation: 12345678Test*
+  phone: 0414-9703439
+  location_id: 1
+  specialty_id: 1
+}
+
+body:multipart-form {
+  title: Urologo
+}

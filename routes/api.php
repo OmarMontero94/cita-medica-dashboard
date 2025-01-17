@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\LocationController;
+use App\Http\Controllers\MedicController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\SpecialtyController;
 use App\Http\Controllers\UserAuthController;
@@ -12,10 +13,10 @@ Route::get('/user', function (Request $request) {
 })->middleware('auth:sanctum');
 
 
-
-
-Route::post('register',[UserAuthController::class,'register']);
 Route::post('login',[UserAuthController::class,'login']);
+
+Route::post('register/medic',[MedicController::class,'create']);
+
 Route::post('logout',[UserAuthController::class,'logout'])
   ->middleware('auth:sanctum');
 
@@ -35,6 +36,7 @@ Route::post('logout',[UserAuthController::class,'logout'])
       Route::prefix('service')->group(function(){
         Route::get('/', 'index');
         Route::get('/{serviceID}', 'indexById');
+        Route::get('/specialty/{specialtyID}', 'indexByspecialtyId');
         Route::post('/', 'store');
         Route::put('/{serviceID}', 'update');
         Route::delete('/{serviceID}', 'delete');
@@ -48,6 +50,21 @@ Route::post('logout',[UserAuthController::class,'logout'])
         Route::post('/', 'store');
         Route::put('/{locationID}', 'update');
         Route::delete('/{locationID}', 'delete');
+      });
+    });
+
+    Route::controller(MedicController::class)->group(function () {
+      Route::prefix('medic')->group(function(){
+        Route::get('/', 'index');
+        Route::get('/csv', 'getMedicsCSV');
+        Route::get('/{medicID}', 'indexById');
+        Route::get('/specialty/{specialtyID}', 'indexBySpecialty');
+        Route::get('/user/{userID}', 'indexByUserId');
+        Route::post('/', 'store');
+        Route::get('/service/{medic_id}', 'indexMedicServiceByMedicId');
+        Route::post('/service', 'addService');
+        Route::put('/{medicID}', 'update');
+        Route::delete('/{medicID}', 'delete');
       });
     });
 

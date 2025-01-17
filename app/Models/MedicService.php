@@ -2,7 +2,9 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class MedicService extends Model
 {
@@ -23,5 +25,10 @@ class MedicService extends Model
     public function service(): BelongsTo
     {
         return $this->belongsTo(Service::class,'service_id','id');
+    }
+
+    public function scopeFindByMedicId(Builder $query, $medicID): void
+    {
+        $query->where('medic_id', $medicID);
     }
 }

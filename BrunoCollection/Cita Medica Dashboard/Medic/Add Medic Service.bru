@@ -1,0 +1,27 @@
+meta {
+  name: Add Medic Service
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{baseUrl}}/api/medic/service/
+  body: formUrlEncoded
+  auth: bearer
+}
+
+auth:bearer {
+  token: 1|iRtDeUtsXAe53hr4VmHg6L9SFzoKVVQMM0ky6gXV28507c5d
+}
+
+body:form-urlencoded {
+  service_id: 2
+  medic_id: 3
+  price: 10.00
+  : 
+  : 
+}
+
+body:multipart-form {
+  title: Urologo
+}

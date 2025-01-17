@@ -5,7 +5,7 @@ namespace App\Http\Resources;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class MedicResource extends JsonResource
+class MedicCSVResource extends JsonResource
 {
     /**
      * Transform the resource collection into an array.
@@ -16,13 +16,13 @@ class MedicResource extends JsonResource
     {
         return [
             'id' => $this->id,
-            'user' => new UserResource($this->user),
+            'name' => $this->user->name,
             'phone' => $this->phone,
-            'location' => new LocationResource($this->location),
-            'specialty' => new SpecialtyResource($this->specialty),
-            'verified_at' => $this->verified_at,
-            'created_at' => $this->created_at,
-            'updated_at' => $this->updated_at,
+            'location' => $this->location->title,
+            'specialty' => $this->specialty->title,
+            'verified at' => isset($this->verified_at) ? $this->verified_at : 'N/V',
+            'created at' => $this->created_at,
+            'updated at' => $this->updated_at,
         ];
     }
 }

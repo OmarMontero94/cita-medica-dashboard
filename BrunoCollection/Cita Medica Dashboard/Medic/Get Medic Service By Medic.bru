@@ -1,11 +1,11 @@
 meta {
-  name: Register Specialty
+  name: Get Medic Service By Medic
   type: http
-  seq: 1
+  seq: 7
 }
 
-post {
-  url: {{baseUrl}}/api/specialty
+get {
+  url: {{baseUrl}}/api/medic/service/3
   body: formUrlEncoded
   auth: bearer
 }
@@ -15,7 +15,11 @@ auth:bearer {
 }
 
 body:form-urlencoded {
-  title: test especialidad
+  service_id: 1
+  medic_id: 3
+  price: 20.00
+  : 
+  : 
 }
 
 body:multipart-form {

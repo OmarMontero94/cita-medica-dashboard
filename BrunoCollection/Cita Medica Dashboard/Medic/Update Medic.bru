@@ -1,0 +1,29 @@
+meta {
+  name: Update Medic
+  type: http
+  seq: 8
+}
+
+put {
+  url: {{baseUrl}}/api/medic/3
+  body: formUrlEncoded
+  auth: bearer
+}
+
+auth:bearer {
+  token: 1|iRtDeUtsXAe53hr4VmHg6L9SFzoKVVQMM0ky6gXV28507c5d
+}
+
+body:form-urlencoded {
+  name: Pedro Ramirez updated
+  email: pramirez@test.com
+  password_confirmation: 12345678Test*
+  phone: 0414-9703439
+  location_id: 1
+  specialty_id: 1
+  password: 12345678Test*
+}
+
+body:multipart-form {
+  title: Urologo
+}

@@ -19,7 +19,20 @@ class ServiceController extends Controller
 
         return response()->json([
             'data'=> ServiceResource::collection($services),
-            'message' => "List of locations."
+            'message' => "List of services."
+        ],Response::HTTP_OK);
+    }
+
+    public function indexBySpecialtyId($specialtyID){
+        $services = Service::query()
+            ->with('specialty')
+            ->findBySpecialtyId($specialtyID)
+            ->orderByTitleAsc()
+            ->get();
+
+        return response()->json([
+            'data'=> ServiceResource::collection($services),
+            'message' => "List of services by specialty."
         ],Response::HTTP_OK);
     }
 

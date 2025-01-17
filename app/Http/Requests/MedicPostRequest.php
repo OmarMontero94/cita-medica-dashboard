@@ -6,7 +6,7 @@ use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rules\Password;
 
 
-class MedicPostPutRequest extends FormRequest
+class MedicPostRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -28,8 +28,8 @@ class MedicPostPutRequest extends FormRequest
             'email'=>'required|string|email|unique:users',
             'password'=>['required','confirmed',Password::min(12)->numbers()->mixedCase()->symbols()],
             'phone'=>'required|string',
-            'location_id'=>'required|integer',
-            'specialty_id'=>'required|integer'
+            'location_id'=>'required|exists:locations,id',
+            'specialty_id'=>'required|exists:specialties,id'
         ];
     }
 }

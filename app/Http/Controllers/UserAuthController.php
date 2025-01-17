@@ -14,34 +14,27 @@ use Illuminate\Http\Request;
 class UserAuthController extends Controller
 {
     
-    public function register(RegisterUserPostRequest $request){
-        $registerUserData = $request->input();
-        $user = User::create([
-            'name' => $registerUserData['name'],
-            'email' => $registerUserData['email'],
-            'password' => Hash::make($registerUserData['password']),
-        ]);
-        return response()->json([
-            'message' => 'User Created',
-        ], Response::HTTP_OK );
-    }
-
     public function login(LoginUserPostRequest $request){
-        $loginUserData = $request->input();
-        $user = User::where('email',$loginUserData['email'])->first();
-        if(!$user || !Hash::check($loginUserData['password'],$user->password)){
+        $credentials = $request->input();
+        
+        if(!Auth::attempt($credentials)){
             return response()->json([
                 'message' => 'Invalid Credentials'
             ],Response::HTTP_UNAUTHORIZED);
         }
-        $token = $user->createToken($user->name.'-AuthToken')->plainTextToken;
+        
+        $user = Auth::user();
+        $token = $user->createToken($user->email.'--AuthToken')->plainTextToken;
         return response()->json([
+            'user' => $user,
             'access_token' => $token,
         ]);
     }
 
     public function logout(Request $request){
-        auth()->user()->tokens()->delete();
+        $user = $request->user();
+
+        $user->currentAccessToken()->delete();
 
         return response()->json([
         "message"=>"logged out"

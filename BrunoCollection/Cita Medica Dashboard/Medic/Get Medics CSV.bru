@@ -1,11 +1,11 @@
 meta {
-  name: List specialties
+  name: Get Medics CSV
   type: http
-  seq: 1
+  seq: 6
 }
 
 get {
-  url: {{baseUrl}}/api/specialty
+  url: {{baseUrl}}/api/medic/csv
   body: formUrlEncoded
   auth: bearer
 }

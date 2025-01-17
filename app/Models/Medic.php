@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasOne;
@@ -12,7 +13,6 @@ class Medic extends Model
     protected $primaryKey = 'id';
 
     protected $fillable = [
-        'name',
         'phone',
         'user_id',
         'location_id',
@@ -25,13 +25,30 @@ class Medic extends Model
     {
         return $this->belongsTo(User::class,'user_id','id');
     }
+
     public function location(): HasOne
     {
-        return $this->hasOne(Location::class,'location_id','id');
+        return $this->hasOne(Location::class,'id','location_id');
     }
 
     public function specialty(): HasOne
     {
-        return $this->hasOne(Location::class,'specialty_id','id');
+        return $this->hasOne(Specialty::class,'id','specialty_id');
     }
+
+    public function scopeFindById(Builder $query, $medicID): void
+    {
+        $query->where('id', $medicID);
+    }
+
+    public function scopeFindBySpecialtyId(Builder $query, $specialtyID): void
+    {
+        $query->where('user_id', $specialtyID);
+    }
+
+    public function scopeFindByUserId(Builder $query, $userID): void
+    {
+        $query->where('user_id', $userID);
+    }
+
 }
